@@ -1,0 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Notable);
+
+body{
+background-color:rgb(132, 132, 248);
+color: rgb(255, 255, 255);
+font-family: 'Raleway',sans-serif;
+}
+h1{
+    font-family: 'Notable',sans-serif;
+    color: rgb(85, 81, 81);
+}
+div{
+    color: rgb(2, 2, 2);
+    font-size: medium;
+    border: 2px solid rgb(0, 0, 0);
+    margin-right: 20px;
+    margin-left: 70px;
+    background-color: rgba(255, 255, 255, 0.863);
+}

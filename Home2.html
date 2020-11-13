@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/test.css">
+    <title>การลงทะเบียนผู้ใช้ OnlineGaming</title>
+    <script>
+        function getData(form){
+            message=""
+            for(let i=0;i<form.activity.length;i++){
+                if(form.activity[i].checked){
+                  message+=form.activity[i].value+" <br />";  
+                }
+               
+            }
+            
+            document.getElementById("ans").innerHTML=message
+        }
+    </script>
+    <style>
+        fieldset{   border-color:rgb(247, 21, 217);
+                    width:70%;
+                    background-color: rgba(0, 0, 139, 0.685);
+                    }
+    </style>
+</head>
+<body>
+    <button style="float:right;width:100px;height:90px;" onclick="document.location='index.html'"><b>กลับหน้าแรก</b></button><br>
+    <h1 style="font-size:40px;"><b>การลงทะเบียนผู้ใช้ใหม่ ONLINEGAMING</b><img src="image/dbq2jza-1f38690d-c2a8-4147-b7bf-93fc9b768ad3.gif" alt="Smiley face" style="width:120px;height:80px;"></h1>
+    <center><img src="image/Gameplay.png" alt="Trulli" width="800" height="120"></center>
+    <form action="Home2.html" method="get" name="myForm">
+        <center><fieldset>
+            <legend><b>ข้อมูลผู้ลงทะเบียน</b></legend>
+            <img src="image/ONline.jpg"alt="Trulli" width="800" height="444">
+                <table><input type="hidden" name="code" value="2222">
+                
+                <tr><td>อีเมลล์</td> <td>:</td><td><input type="text" name="email" ></td></tr>
+                <tr><td>Confirm อีเมลล์</td> <td>:</td><td><input type="text" name="cemil" ></td></tr>
+                <tr><td>รหัสผ่าน</td> <td>:</td> <td><input type="password" name="password"></td></tr>
+                <tr><td>Confirm รหัสผ่าน</td> <td>:</td> <td><input type="password" name="cpassword"></td></tr>
+                <tr><td>ชื่อ</td><td>:</td> <td><input type="text" name="fname"></td></tr>
+                <tr><td>นามสกุล</td> <td>:</td> <td><input type="text" name="lname"></td></tr>
+                <tr><td>ชื่อเล่น*</td><td>:</td> <td><input type="text" name="nname"></td></tr>
+                <tr><td>เพศ</td><td>:</td><td><input type="radio" name="genger" value="male">ชาย
+                <input type="radio" name="genger" value="female">หญิง</td></tr>
+                <tr><td>วันเกิด</td> <td>:</td> <td><input type="date" name="birthbay"></td></tr>
+                <tr><td>สถานะ</td><td>:</td> <td><input type="radio" name="stutas" value="single">โสด
+                <input type="radio" name="stutas" value="divorce">มีแฟนแล้ว</tr>
+                <tr><td>รูปภาพ</td> <td>:</td> <td><input type="file" name="filepoto"></td></tr>
+                <tr><td>ที่อยู่</td> <td>:</td><td><input type="text" name="form" ></td></tr><br></table>
+                
+               
+            
+    </fieldset></center></form> 
+    <br>
+    <br>
+    <center><input type="button" value="ตกลง" onclick="getData(this.form)" style="font-size:20px;">
+    <button onclick="document.location='index.html'"><b style="font-size:20px;">ย้อนกลับ</b></button></center>
+    <center><img src="image/AdeptFatInchworm-small.gif"alt="Trulli" width="800" height="100"></center>
+    </form>
+    <div id="ans">
+
+    </div>
+</body>
+</html>

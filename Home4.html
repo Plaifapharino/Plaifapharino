@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>นับเลข 0-9 ฝึกเขียนตัวเลข </title>
+    <script src="js/jquery-ui-1.12.1/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+
+    <script src="js/jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="css/test1.css">
+    <style>
+        button{
+          border: 8px solid rgb(10, 10, 10);
+          margin: 25px;
+          background-color: rgb(255, 255, 255);
+        }
+        </style>
+    <style>
+        h1 {
+          border: 5px solid black;
+          margin: 25px;
+          background-color: lightblue;
+        }
+        </style>
+    <script> 
+        $(document).ready(function(){
+          $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+          });
+        });
+        </script>
+        <style> 
+        #panel, #flip {
+          padding: 5px;
+          text-align: center;
+          background-color: #f16310b0;
+          border: solid 1px #ffffff;
+        }
+        
+        #panel {
+          padding: 50px;
+          display: none;
+        }
+        </style>
+
+    <script>
+        $(function(){
+            $("#b0").on("mouseenter",function(){
+                $("#0").show(1000);
+                $("#1").hide();
+                $("#2").hide();
+                $("#3").hide();
+                $("#4").hide();
+                $("#5").hide();
+                $("#6").hide();
+                $("#7").hide();
+                $("#8").hide();
+                $("#9").hide();
+                
+            });
+            $("#b1").on("mouseenter",function(){
+                $("#0").hide();
+                $("#1").show(1000);
+                $("#2").hide();
+                $("#3").hide();
+                $("#4").hide();
+                $("#5").hide();
+                $("#6").hide();
+                $("#7").hide();
+                $("#8").hide();
+                $("#9").hide();
+                
+            });
+            $("#b2").on("mouseenter",function(){
+                $("#0").hide();
+                $("#1").hide();
+                $("#2").show(1000);
+                $("#3").hide();
+                $("#4").hide();
+                $("#5").hide();
+                $("#6").hide();
+                $("#7").hide();
+                $("#8").hide();
+                $("#9").hide();
+                
+            });
+            $("#b3").on("mouseenter",function(){
+                $("#0").hide();
+                $("#1").hide();
+                $("#2").hide();
+                $("#3").show(1000);
+                $("#4").hide();
+                $("#5").hide();
+                $("#6").hide();
+                $("#7").hide();
+                $("#8").hide();
+                $("#9").hide();
+                
+            });
+            $("#b4").on("mouseenter",function(){
+                $("#0").hide();
+                $("#1").hide();
+                $("#2").hide();
+                $("#3").hide();
+                $("#4").show(1000);
+                $("#5").hide();
+                $("#6").hide();
+                $("#7").hide();
+                $("#8").hide();
+                $("#9").hide();
+                
+            });
+            $("#b5").on("mouseenter",function(){
+                $("#0").hide();
+                $("#1").hide();
+                $("#2").hide();
+                $("#3").hide();
+                $("#4").hide();
+                $("#5").show(1000);
+                $("#6").hide();
+                $("#7").hide();
+                $("#8").hide();
+                $("#9").hide();
+                
+            });
+        });
+    </script>
+</head>
+<body>
+    <button style="float:right;width:100px;height:90px;" onclick="document.location='index.html'"><b>กลับหน้าแรก</b></button><br>
+    <h1 style="font-size:60px;"><b>นับเลข 0-9 ฝึกเขียนตัวเลข <img src="image/ABCD.gif" alt="Smiley face" style="width:120px;height:80px;"></b></h1>
+
+    <div id="flip">"คลิก" เพื่อดูคำอธิบาย</div>
+    <div id="panel">ผึกอ่านคำศัพท์ ไทย อังกฦษ จีน คลิกที่ปุ่ม เลขข้างล่างรูปเพื่อดูวิธีเขียนเลขแอโรบิค</div>
+    
+    <div id="divA">
+        <b> " 0 "<br>ภาษาไทย : ศูนย์<br>English : Zero<br>中文 (Zhōngwén) : 中央 (Zhōngyāng) </b></div>
+        <img src="image/Zero.gif" id="0" hidden width="666" height="333">
+        <img src="image/00000.jpg"  alt="Smiley face" width="666" height="333"><br>
+        <button id="b0" style="width:333px;height:40px;"><b>เลข 0</b> </button>
+        <br>
+        <br>
+    
+    <div id="divB">
+        <b> " 1 "<br>ภาษาไทย : หนึ่ง<br>English : One<br>中文 (Zhōngwén) : 一 (Yī) </b></div>
+        <img src="image/one.gif" id="1" hidden width="666" height="333">
+        <img src="image/11111.jpg" alt="Smiley face" width="666" height="333"><br>
+        <button id="b1"style="width:333px;height:40px;"><b>เลข 1 </b></button>
+        <br>
+        <br>
+
+     <div id="divC">
+        <b> " 2 "<br>ภาษาไทย : สอง<br>English : Two<br>中文 (Zhōngwén) : 二 (Èr) </b></div>
+        <img src="image/two.gif" id="2" hidden width="666" height="333">
+        <img src="image/22222.jpg" alt="Smiley face" width="666" height="333"><br>
+        <button id="b2"style="width:333px;height:40px;"><b>เลข 2 </b></button>
+        <br> 
+        <br>
+
+    <div id="divC">
+        <b> " 3 "<br>ภาษาไทย : สาม<br>English : Three<br>中文 (Zhōngwén) : 三 (Sān) </b></div>
+        <img src="image/three.gif" id="3" hidden width="666" height="333">
+        <img src="image/33333.jpg" alt="Smiley face" width="666" height="333"><br>
+        <button id="b3" style="width:333px;height:40px;"><b>เลข 3 </b></button>
+        <br>
+        <br>
+        
+    <div id="divC">
+        <b> " 4 "<br>ภาษาไทย : สี่<br>English : Four<br>中文 (Zhōngwén) : 四 (Sì) </b></div>
+        <img src="image/four.gif" id="4" hidden width="666" height="333">
+        <img src="image/444444.jpg" alt="Smiley face" width="666" height="333"><br>
+        <button id="b4"style="width:333px;height:40px;"><b>เลข 4 </b></button>
+        <br>
+        <br>
+
+    <div id="divC">
+        <b> " 5 "<br>ภาษาไทย : ห้า<br>English : Five<br>中文 (Zhōngwén) : 五 (Wǔ) </b></div>
+        <img src="image/five.gif" id="5" hidden width="666" height="333">
+        <img src="image/55555.jpg" alt="Smiley face" width="666" height="333"><br>
+        <button id="b5"style="width:333px;height:40px;"><b>เลข 5 </b></button>
+        <br>
+        <br>
+</body>
+</html>

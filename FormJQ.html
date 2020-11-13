@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FormJQ</title>
+    <script src="/js/jquery-min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <link rel="stylesheet" href="css/test1.css">
+  <body>
+    <button style="float:right;width:100px;height:90px;" onclick="document.location='index.html'"><b>กลับหน้าแรก</b></button><br>
+    <center><h1 id="Myh">
+      FormJQ
+    </h1> <br />
+    สูตรคูณ
+    <form action="" id="myForm">
+      <input type="number" name="" id="num1" />
+    </form>
+    <div id="ans"></div>
+    <div id="ans2"></div>
+    <br /></center>
+    คำนวนน้ำหนัก
+    <form action="" id="myForm2">
+      <input type="number" name="" id="num3" /> KG <br />
+      <input type="number" name="" id="num4" /> CM <br />
+    </form>
+    <div id="bmi"></div>
+  </body>
+</html>
+<script>
+  $(function () {
+
+    $("#myForm").change(function () {
+      var num1 = parseInt($("#num1").val());
+      var msg = "";
+      if (isNaN(num1) == false) {
+        for (let i = 0; i < 13; i++) {
+          msg += `${i} * ${num1} = ${i * num1} <br>`;
+          $("#ans2").html(msg);
+        }
+      } else {
+        $("#ans2").text("");
+      }
+    });
+
+    $("#myForm2").change(function () {
+      var num3 = Number.parseFloat($("#num3").val()); //KG
+      var num4 = Number.parseFloat($("#num4").val()); //CM
+      num4 = num4 / 100; //M
+
+      if (isNaN(num3) == false && isNaN(num4) == false) {
+        console.log(num3);
+        console.log(num4);
+        var bmi = num3 / num4 ** 2;
+        bmi = bmi.toFixed(2);
+        console.log(bmi);
+        if (bmi < 18.5) {
+          var msg_bmi = "น้ำหนักน้อย";
+          console.log(msg_bmi);
+        } else if (bmi < 22.9) {
+          var msg_bmi = "น้ำหนักปกติ";
+          console.log(msg_bmi);
+        } else if (bmi < 24.9) {
+          var msg_bmi = "น้ำหนักปกติเกิน";
+          console.log(msg_bmi);
+        } else if (bmi < 29.9) {
+          var msg_bmi = "โรคอ้วน";
+          console.log(msg_bmi);
+        } else if (bmi > 30) {
+          var msg_bmi = "อ้วนมาก";
+          console.log(msg_bmi);
+        }
+      } else {
+      }
+      $("#bmi").html(`
+        Height = ${num4} M <br>
+        Height = ${num3} CM <br>
+        Your BMI = ${bmi} <br>
+        State = ${msg_bmi} <br>
+        `);
+    });
+  });
+</script>

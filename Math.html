@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<link rel="stylesheet" href="css/test1.css">
+<body>
+    <button style="float:right;width:100px;height:90px;" onclick="document.location='index.html'"><b>กลับหน้าแรก</b></button><br>
+    <input type="button" value="Date" onclick="showDate()">
+    <div id="show"></div>
+</body>
+<script>
+    function showDate() {
+        var date = new Date();
+    document.getElementById("show").innerHTML = date
+    }
+</script>
+</html>

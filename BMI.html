@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำนวนค่า BMI</title>
+    <script src="/js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="/js/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script language="JavaScript">
+      
+        function Bmi() {
+        var weight = document.bmiForm.weight.value
+        var height = document.bmiForm.height.value
+        if(weight > 0 && height > 0){	
+        var finalBmi = weight/(height/100*height/100)
+        document.bmiForm.bmi.value = finalBmi
+        if(finalBmi < 18.5){
+        document.bmiForm.meaning.value = "น้ำหนักต่ำกว่าเกณฑ์"
+        }
+        if(finalBmi > 18.5 && finalBmi < 22.9){
+        document.bmiForm.meaning.value = "สมส่วน"
+        }
+        if(finalBmi > 23 && finalBmi < 24.9){
+        document.bmiForm.meaning.value = "น้ำหนักเกิน"
+        }
+        if(finalBmi > 25 && finalBmi < 29.9){
+        document.bmiForm.meaning.value = "โรคอ้วน"
+        }
+        if(finalBmi > 30){
+        document.bmiForm.meaning.value = "โรคอ้วนอันตราย"
+        }
+        }
+        else{
+        alert("กรุณากรอกน้ำหนักและส่วนสูงของคุณ")
+        }
+        }
+        </script>
+        <link rel="stylesheet" href="css/test1.css">
+</head>
+<body>
+  <button style="float:right;width:100px;height:90px;" onclick="document.location='index.html'"><b>กลับหน้าแรก</b></button><br>
+   <center><fieldset><form name="bmiForm">
+    <td>กรุณากรอกน้ำหนักt(kg):</td> <input type="text" name="weight" size="10"><br />
+    <td>กรุณากรอกส่วนสูง(cm):</td> <input type="text" name="height" size="10"><br /><br />
+        <input type="button" value="คำนวณ" onClick="Bmi()" style="width:300px;height:40px;" ><br /><br />
+    <td>BMI ของคุณคือ :</td> <input type="text" name="bmi" size="25"><br />
+    <td>ภาวะน้ำหนักตัว :</td> <input type="text" name="meaning" size="25"><br />
+       </form></fieldset></center>
+</body>
+</html>
+

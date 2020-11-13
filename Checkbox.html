@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+    <script>
+        function getData(form){
+            message=""
+            for(let i=0;i<form.activity.length;i++){
+                if(form.activity[i].checked){
+                  message+=form.activity[i].value+" ";  
+                }
+               
+            }
+            
+            document.getElementById("ans").innerHTML=message
+        }
+    </script>
+    <link rel="stylesheet" href="css/test1.css">
+</head>
+<body>
+    <button style="float:right;width:100px;height:90px;" onclick="document.location='index.html'"><b>กลับหน้าแรก</b></button><br>
+    <center><h2>CHECKBOX</h2></center>
+    <h1>เลือกกีฬาที่ชอบ :</h1>
+    เลือกได้มากกว่า 1 อย่าง
+    <form action="Checkbox.html" method="get" name="myForm">
+    <input type="checkbox" name="activity" value="ว่ายน้ำ"> : ว่ายน้ำ <br />
+    <input type="checkbox" name="activity" value="วิ่ง"> : วิ่ง <br />
+    <input type="checkbox" name="activity" value="ดูทีวี"> : ฟุตบอล <br />
+    <input type="checkbox" name="activity" value="นอน"> : นอน <br />
+    <input type="button" onclick="getData(this.form)" value="ส่งข้อมูล">
+    </form>
+    <fieldset>
+    <p id="ans"></p>
+    </fieldset>
+</body>
+</html>
